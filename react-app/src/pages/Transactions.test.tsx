@@ -83,7 +83,7 @@ describe('CreateTransaction component', () => {
       id: expect.any(String),
       date: expect.any(Date),
       details: 'Test Company',
-      ledger: '', // TODO: test ledger
+      category: '', // TODO: test category
       amount: 100,
     });
   });
@@ -108,14 +108,14 @@ describe('Transactions component', () => {
         id: '1',
         date: new Date('2022-01-01'),
         details: 'Company A',
-        ledger: 'Income',
+        category: 'Income',
         amount: 100,
       },
       {
         id: '2',
         date: new Date('2022-01-02'),
         details: 'Company B',
-        ledger: 'Expense',
+        category: 'Expense',
         amount: -50,
       },
     ];
@@ -149,7 +149,7 @@ describe('Transactions component', () => {
         id: '1',
         date: new Date('2022-01-01'),
         details: 'Company A',
-        ledger: 'Income',
+        category: 'Income',
         amount: 100,
       },
     ];

@@ -16,13 +16,13 @@ export default (app: Express) => {
     })
     // Route to add a transaction
     .post((req: Request, res: Response) => {
-      const { id, date, details, amount, ledger } = req.body;
+      const { id, date, details, amount, category } = req.body;
       const newTransaction: Transaction = {
         id,
         date: dateFns.parseISO(date),
         details,
         amount,
-        ledger,
+        category,
       };
       transactionsList.saveTransaction(newTransaction);
       res.status(201).json({

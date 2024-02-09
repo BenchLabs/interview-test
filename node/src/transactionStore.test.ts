@@ -20,7 +20,7 @@ describe('TransactionStore', () => {
       date: new Date('2024-01-15'),
       details: 'Some transaction details',
       amount: 50,
-      ledger: 'income',
+      category: 'income',
     });
 
     const resultB = store.getTransactionsInRange({ startDate, endDate });
@@ -34,7 +34,7 @@ describe('TransactionStore', () => {
       date: new Date(),
       details: 'Some transaction details',
       amount: 50,
-      ledger: 'income',
+      category: 'income',
     };
 
     store.saveTransaction(newTransaction);

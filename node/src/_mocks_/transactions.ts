@@ -15,7 +15,7 @@ function fakeTransaction() {
         dec: 2,
       }),
     ),
-    ledger: faker.helpers.arrayElement(categoryList),
+    category: faker.helpers.arrayElement(categoryList),
   };
 }
 

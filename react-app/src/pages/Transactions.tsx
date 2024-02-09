@@ -39,7 +39,7 @@ export function CreateTransaction({ onSave, onCancel, open }: CreateTransactionP
   const [transactionData, setTransactionData] = useState({
     date: format(startOfDay(new Date()), 'yyyy-MM-dd'),
     details: '',
-    ledger: '',
+    category: '',
     amount: 0,
   });
 
@@ -52,7 +52,7 @@ export function CreateTransaction({ onSave, onCancel, open }: CreateTransactionP
     setTransactionData({
       date: format(startOfDay(new Date()), 'yyyy-MM-dd'),
       details: '',
-      ledger: '',
+      category: '',
       amount: 0,
     });
   };
@@ -61,7 +61,7 @@ export function CreateTransaction({ onSave, onCancel, open }: CreateTransactionP
     setTransactionData({
       date: format(startOfDay(new Date()), 'yyyy-MM-dd'),
       details: '',
-      ledger: '',
+      category: '',
       amount: 0,
     });
     onCancel();
@@ -91,9 +91,9 @@ export function CreateTransaction({ onSave, onCancel, open }: CreateTransactionP
           <Select
             labelId="category-select"
             label="Category"
-            value={transactionData.ledger}
+            value={transactionData.category}
             onChange={(e) =>
-              setTransactionData({ ...transactionData, ledger: e.target.value as string })
+              setTransactionData({ ...transactionData, category: e.target.value as string })
             }>
             {categoryList.map((category: string) => (
               <MenuItem key={category} value={category}>
@@ -198,7 +198,7 @@ function Transactions() {
                       <TableRow key={rowIndex}>
                         <TableCell>{format(row.date, 'MM/dd/yyyy')}</TableCell>
                         <TableCell>{row.details}</TableCell>
-                        <TableCell>{row.ledger}</TableCell>
+                        <TableCell>{row.category}</TableCell>
                         <TableCell>
                           {(() => {
                             const isNegative = row.amount < 0;

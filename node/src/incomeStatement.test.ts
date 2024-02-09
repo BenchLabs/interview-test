@@ -3,12 +3,12 @@ import { calcIncomeStatement, formatIncomeStatement } from './incomeStatement';
 describe('calcIncomeStatement', () => {
   test('it calculates income statement correctly', () => {
     const transactions = [
-      { id: '1', details: 'Test 1', ledger: 'Service Revenue', amount: 100, date: new Date() },
-      { id: '2', details: 'Test 2', ledger: 'Cost of Goods Sold', amount: -30, date: new Date() },
+      { id: '1', details: 'Test 1', category: 'Service Revenue', amount: 100, date: new Date() },
+      { id: '2', details: 'Test 2', category: 'Cost of Goods Sold', amount: -30, date: new Date() },
       {
         id: '3',
         details: 'Test 3',
-        ledger: 'Marketing or Advertising',
+        category: 'Marketing or Advertising',
         amount: 50,
         date: new Date(),
       },
