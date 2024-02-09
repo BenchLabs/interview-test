@@ -4,12 +4,11 @@ Part of the Bench interview process is a pair programming exercise where you wil
 
 Therefore, the Bench code exercise is going to be based around an existing code base. You are free to look at the code base at your leisure prior to the interview to familiarize yourself with the existing code. The challenge is described below. You will have 45 minutes - 1 hour to work on the code with one of our engineers. The expectation is NOT that you will finish the exercise but rather to see how you think, how you interact and how you approach the code to solve the problem. Please note that if you spend the entire interview refactoring the code with the purpose of making the exercise easier to achieve, this is perfectly acceptable.
 
-**You have the option of either working with the NodeJS or React versions of the exercise.**
+**ℹ️ You have the option of either working with the NodeJS or React version of the exercise. They represent the same system, but run independently of each other so you can focus on the one you choose.**
 
 ## Bench Basic Financial Management System
 
-The Bench Basic Financial Management System is a simple system meant to help small business owners manage and track their finances. It was initially built to very tight deadlines and requires some tender loving care to improve.  
-Fortunately, the original team left you in good shape with some automated testing!
+The Bench Basic Financial Management System is a simple system meant to help small business owners manage and track their finances. It was initially built to very tight deadlines and requires some tender loving care to improve. Fortunately, the original team left you in good shape with some automated testing!
 
 Currently, the system consist of a React frontend or NodeJS REST backend API with an in-memory database. The current features are:
 
@@ -17,9 +16,9 @@ Currently, the system consist of a React frontend or NodeJS REST backend API wit
 2. Add a transaction
 3. View a simple income statement
 
-Our Product Managers talked with small business owners about features they'd ❤ to have. The problem they run into is that there are no accounts in the system yet. The business owner is the direct user of the API and they should be able to do the following actions:
+Our Product Managers talked with small business owners about features they'd ❤ to have. The problem they run into is that there are no accounts (financials products like a chequing account) in the system yet. The business owner is the direct user of the application and they should be able to do the following actions:
 
-1. Create an account
+1. Create an account (e.g. chequing or savings account)
 2. Add a transaction to an account
 3. Show balances per account
 
