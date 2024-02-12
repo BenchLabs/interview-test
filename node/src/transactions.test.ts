@@ -22,7 +22,7 @@ describe('Transactions Route', () => {
         date: new Date('2024-01-01'),
         details: 'Transaction 1',
         amount: 50,
-        ledger: 'income',
+        category: 'income',
       },
     ];
 
@@ -42,7 +42,7 @@ describe('Transactions Route', () => {
       date: dateFns.formatISO(new Date()),
       details: 'New Transaction',
       amount: 75,
-      ledger: 'Rent or Lease',
+      category: 'Rent or Lease',
     };
 
     const response = await request(app).post('/transactions/').send(newTransaction);

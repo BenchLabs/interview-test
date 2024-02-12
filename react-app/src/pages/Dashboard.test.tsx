@@ -8,11 +8,17 @@ describe('Dashboard Component', () => {
   describe('createIncomeStatement', () => {
     test('calculates income statement correctly', () => {
       const transactions: Transaction[] = [
-        { id: '1', ledger: 'Sales Revenue', amount: 100, date: new Date(), details: 'Test' },
-        { id: '2', ledger: 'Cost of Goods Sold', amount: 50, date: new Date(), details: 'Test 2' },
+        { id: '1', category: 'Sales Revenue', amount: 100, date: new Date(), details: 'Test' },
+        {
+          id: '2',
+          category: 'Cost of Goods Sold',
+          amount: 50,
+          date: new Date(),
+          details: 'Test 2',
+        },
         {
           id: '3',
-          ledger: 'Bank & Merchant Fees',
+          category: 'Bank & Merchant Fees',
           amount: 10,
           date: new Date(),
           details: 'Test 3',

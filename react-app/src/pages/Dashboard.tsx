@@ -61,9 +61,8 @@ export const createIncomeStatement = (transactions: Transaction[], dateRange: Da
   // Put in filteredTxns arr
   const calcIncomeStatement = (arr: Transaction[]) => {
     arr.forEach((item) => {
-      const { ledger } = item;
-      const category = ledger as keyof typeof categories;
-      const cat = categories[category] ?? {};
+      const { category } = item;
+      const cat = categories[category as keyof typeof categories] ?? {};
       const type = cat.type as keyof typeof incomeStatement;
       const amount = item.amount;
 

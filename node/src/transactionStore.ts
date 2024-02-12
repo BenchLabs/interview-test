@@ -6,7 +6,7 @@ export type Transaction = {
   date: Date;
   details: string;
   amount: number;
-  ledger: string;
+  category: string;
 };
 
 // In-memory data store
